@@ -1,6 +1,6 @@
 import re
 import time
-import os
+#import os
 from pathlib import Path
 
 import requests
@@ -11,17 +11,17 @@ from knowledge_base import build_index, search_index, load_documents
 BASE_DIR = Path(__file__).resolve().parent
 DOCS_DIR = BASE_DIR / "documents"
 
-#OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
-#MODEL = "qwen3:4b"
-
-
-
-OLLAMA_URL = os.getenv(
-    "OLLAMA_URL",
-    "http://127.0.0.1:11434/api/generate"
-)
-
+OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
 MODEL = "qwen3:4b"
+
+
+
+#OLLAMA_URL = os.getenv(
+ #   "OLLAMA_URL",
+  #  "http://127.0.0.1:11434/api/generate"
+#)
+
+#MODEL = "qwen3:4b"
 
 
 st.set_page_config(
